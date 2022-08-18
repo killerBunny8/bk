@@ -1,0 +1,222 @@
+/* */
+/* Whole page 
+
+/*========== Navigation========== */ 
+
+.Nav li, .navButtons li {/* selects both li from nav and navbuttons class*/
+  text-align: center; /* aligns text to center*/
+  display: inline; /* means they will display on the same line*/
+  font-size: calc(0.75em + 1vmin); /* makes font responsive by calculating depending on the size of browser  */
+}
+.Nav li a{/* selects anchor from li in the nav container */
+  text-decoration: none;/* removes underline from anchor*/
+  padding:  3%  2%;/* adds padding to all sides*/
+  color: rgb(80, 35, 20); /* sets colour of font*/
+}
+.Nav li a:hover{/* anchor link when its hovered over */
+  color: rgb(214, 35, 0) /* sets font*/
+}
+/* navigation buttons */
+.navButtons ul { /* chooses ul element from navbuttons class*/
+  text-align: right; /* aligns text to the right*/
+}
+.navButtons a { /* selects all anchor elements in navButtons class*/
+  text-decoration: none; 
+  padding:  3%  2%;
+  color: white; /* font colour */
+}
+.button0 a{
+  background-color: rgb(214, 35, 0); /*changes background color */
+  padding: 5px 12px;
+  border-radius: 18px; /* adds a radius to corner of the button class to make it curved */
+}
+.button0 a:hover{
+    background-color: rgb(167, 27, 0); /* changes background color to this when button is hovered over */
+}
+.button1 a{
+  background-color: rgb(80, 35, 20);
+  padding: 5px 12px;
+  border-radius: 18px; 
+  margin: 0 7PX;
+}
+
+/*========= Main Page ===========*/ 
+#main-page{
+  margin-top: 48px;/* margin top*/
+}
+.mainImg0, .mainImg1, .mainImg2, .mainImg3, .mainImg4 { /* selects all these classes */
+  position: relative; /* positions element relative to itself*/
+}
+.mainImg0 img{ /* selects img from class*/
+  width: 100%; /* make img width the full size of parent class*/
+}
+.mainImg1 img, .mainImg2 img, .mainImg3 img, .mainImg4 img { /* selects all img from classes */
+  border-radius: 35px; /* makes img curved */
+  border: solid 3px white; /* adds a border */
+  width:100%; /* max width*/
+}
+ .mainImg3 img, .mainImg4 img{
+  height: 90%; /* sets height to 90% of parent container*/
+ }
+/*buttons*/
+.mainButtons0, .mainButtons1, .mainButtons2, .mainButtons3, .mainButtons4 { /* selects all these classes*/
+  position: absolute; /* positions iself relative to its parents posiition  */
+  top: 80%; /* positions the y axis*/
+  left: 50%; /* positions the x axis */
+  font-size: calc(0.55em + 0.8vmin);/* makes font responsive by calculating depending on the size of browser  */
+  color: white; /* font color */
+  padding: 0px 7px;
+  border-radius: 35px;/* makes img curved */
+  transform: translate(-50%, -50%); /* positions element*/
+  z-index: 0; /* moves element forward */
+  text-decoration:none;
+}
+.mainButtons0{
+  background-color: rgb(245, 235, 220);
+  color: rgb(214, 35, 0);
+  transform: translate(-50%, -50%); /* positions element*/
+  top: 78%;/* positions the y axis*/
+  left: 14%;/* positions the x axis */
+}
+.mainButtons0:hover{
+  background-color: rgb(255, 220, 210);
+}
+.mainButtons1, .mainButtons3, .mainButtons4{
+  background-color:  rgb(214, 35, 0);;
+}
+.mainButtons1:hover, .mainButtons3:hover, .mainButtons4:hover{
+    background-color: rgb(167, 27, 0);
+}
+
+/* Grid area */
+#main-page{
+  display: grid; /* display as a grid */
+  grid-template-areas: /*  */
+    'first first' /* specifies column 1*/
+    'second third' /* specifies column 2*/
+    'fourth fifth';/* specifies column 3 */
+  grid-gap: 10px 12px; /* specifies gap between grid elements*/
+}
+.mainImg0{
+  grid-area: first; /* assigns the grid template name */
+}
+.mainImg1{
+  margin: 1% 3%; /* adds a margin */
+  grid-area:second;/* assigns the grid template name */
+}
+.mainImg2{
+  margin: 1% 3%;/* adds a margin */
+  grid-area:third;/* assigns the grid template name */
+}
+.mainImg3{
+  margin: 1% 3%;/* adds a margin */
+  grid-area:fourth;/* assigns the grid template name */
+}
+.mainImg4{
+  margin: 1% 3%;/* adds a margin */
+  grid-area:fifth;/* assigns the grid template name */
+}
+/*======= lower Main page======*/
+#main-page-lower{
+  display: grid; /* display as a grid */
+  grid-template:auto / 60% 40%; /* defines grid height as auto and column lengths */
+background: repeating-linear-gradient(rgb(245, 235, 220), rgb(245, 235, 220) 30%, rgb(239, 225, 204) 30%, rgb(239, 225, 204) 100%); /* adds a background with two colours */
+}
+
+.ldiv0 img{
+  max-height: 1011.410px; /* max height so element cant be taller than this  */
+  max-width:672.949px;/* max width cant be wider than this */
+  margin-left:20%; /* margin on left side only  */
+  width:70% ; /* width 70% of parent container  */
+ 
+}
+.ldiv1{
+  max-width: 446.426px;/* max width cant be wider than this */
+  margin-top:40%;/* margin on top side only  */
+  display: grid;  /* display as a grid */
+  grid-template: 40% 12% 35% / 90%; /* specifies grid height and columns */
+}
+.ldiv1 h1{
+  display: flex; /* display as flex  */
+  align-self: flex-end; /* alligns it at the end of parent container */
+  font-weight: 900; /* specifies font weight, how bold it is*/
+  font-size: calc(1.25em + 0.85vmin);/* makes font responsive by calculating depending on the size of browser  */
+} 
+.ldiv1 p{
+  font-size: calc(0.55em + 0.8vmin);/* makes font responsive by calculating depending on the size of browser  */
+
+}
+.appLogos{
+  max-width: 446.426px;/* max width */
+  display: grid; /* display as grid */
+  grid-template: 100% / auto auto;/* */
+
+}
+.appLogos img{
+  height: 100%;
+  max-width:223.213px;/* max width */
+  max-height:74.863px;/* max height */
+}
+
+/*============FOOTER==============*/
+footer{
+  padding: 4% 8% 2% 8%;
+  height: 40%;  
+  display: grid;
+  grid-template: auto auto / 100%;
+  text-decoration: none;
+  background-color: rgb(43, 2, 0);
+  color: rgb(245, 235, 220);
+  
+}
+.top{
+  display:grid;
+  grid-template: 100% / 60% auto;
+  font-size: calc(0.45em + 0.8vmin);/* makes font responsive by calculating depending on the size of browser  */
+}
+footer ul{
+  list-style-type: none; /* removes bullet points from list */
+  padding:0; /* removes indent */
+}
+footer a{
+  color: rgb(187, 163, 145);
+  text-decoration: none;
+}
+footer a:hover{
+  text-decoration: underline; /* adds underline when element is hovered over*/
+}
+footer h1{
+  font-size: calc(1.25em + 0.8vmin);/* makes font responsive by calculating depending on the size of browser  */
+}
+footer p{
+  font-size: calc(0.45em + 0.8vmin);/* makes font responsive by calculating depending on the size of browser  */
+  color: rgb(187, 163, 145);
+}
+.bottom h1{
+  grid-area: bktitle;
+}
+.social-links{
+  grid-area: socials;
+}
+.bottom p{
+  grid-area: disclaimer;
+}
+.bottom{
+  display: grid;
+  grid-template-areas: 
+    'bktitle socials ' 
+    'disclaimer disclaimer';
+  grid-template-columns: 65%  auto;
+  
+}
+.social-links{
+  max-height: 64.549px;/* max height */
+  display: grid;
+  grid-template: 64.549px / 98.712px 46.275px 46.275px 46.275px 46.275px;
+}
+.social-links img{
+  height: 60%;
+  filter: invert(100%); /* inverts color of images*/
+}
+
+
